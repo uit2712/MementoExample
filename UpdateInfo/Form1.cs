@@ -23,7 +23,6 @@ namespace UpdateInfo
         private void btnSave_Click(object sender, EventArgs e)
         {
             _originator.State = new UserInfo(txtName.Text, (int)nudAge.Value, cbbGender.Text, cbbJob.Text, txtAddress.Text);
-            UserInfoMemento memento = _originator.Save();
             _caretaker.Save(_originator);
             MessageBox.Show("Đã lưu!", "Lưu");
         }

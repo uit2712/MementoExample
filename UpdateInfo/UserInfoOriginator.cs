@@ -4,12 +4,12 @@
     {
         public UserInfo State { get; set; } // state
 
-        public void Undo(UserInfoMemento memento)
+        public void SetMemento(UserInfoMemento memento)
         {
             State = memento.State;
         }
 
-        public UserInfoMemento Save()
+        public UserInfoMemento CreateMemento()
         {
             return new UserInfoMemento(State);
         }

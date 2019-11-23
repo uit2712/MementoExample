@@ -6,12 +6,12 @@
 
         public void Save(UserInfoOriginator originator)
         {
-            _memeto = originator.Save();
+            _memeto = originator.CreateMemento();
         }
 
         public void Undo(UserInfoOriginator originator)
         {
-            originator.Undo(_memeto);
+            originator.SetMemento(_memeto);
         }
     }
 }
