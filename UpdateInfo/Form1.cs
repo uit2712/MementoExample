@@ -31,6 +31,11 @@ namespace UpdateInfo
         {
             _caretaker.Undo(_originator);
             UserInfo userInfo = _originator.State;
+            SetValues(userInfo);
+        }
+
+        private void SetValues(UserInfo userInfo)
+        {
             txtName.Text = userInfo.Name;
             nudAge.Value = userInfo.Age;
             cbbGender.SelectedItem = userInfo.Gender;
